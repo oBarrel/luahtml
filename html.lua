@@ -37,12 +37,6 @@ function html.applyPageBreak(fname)
 
 end
 
-function processLine(l,sepa)
-	
-end
-
-
-
 
 function html.importTable_CSV(fname, source, sep, withheader)
 	
@@ -79,7 +73,7 @@ function html.importTable_CSV(fname, source, sep, withheader)
 		o:write("<tr>\n")
 		while j and j>1 do
 			colValue=string.sub(l, i, j-1)
-			if (withheader)and k==1 then s=string.format("<th>%s</td>", colValue)
+			if (withheader)and k==1 then s=string.format("<th>%s</th>", colValue)
 			else s=string.format("<td>%s</td>", colValue)end
 			o:write(s)
 			i=j+1
